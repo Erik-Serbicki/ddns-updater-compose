@@ -2,7 +2,8 @@ services:
   ddns-updater:
     image: ghcr.io/qdm12/ddns-updater
     container_name: ddns-updater
-    network_mode: bridge
+    networks:
+      - traefik-public
     ports:
       - 8040:8040/tcp
     volumes:
@@ -45,3 +46,6 @@ services:
       - "traefik.http.routers.ddns-updater-secure.tls=true"
       - "traefik.http.routers.ddns-updater-secure.tls.certresolver=letsencrypt"
 
+networks:
+  traefik-public:
+    external: true
