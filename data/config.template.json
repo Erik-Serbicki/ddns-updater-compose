@@ -2,7 +2,7 @@
   "settings": [
     {
       "provider": "porkbun",
-      "domain": "[[DOMAIN.COM]]",
+      "domain": "[[DOMAIN_NAME]]",
       "api_key": "[[PORKBUN_API_KEY]]",
       "secret_api_key": "[[PORKBUN_SECRET_API_KEY]]",
       "ip_version": "ipv4",
