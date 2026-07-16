@@ -19,6 +19,7 @@ services:
       - PUBLICIP_DNS_PROVIDERS=all
       - PUBLICIP_DNS_TIMOUT=3s
       - HTTP_TIMOUT=10s
+      - RESOLVER_ADDRESS=192.168.5.76
 
       # Web UI
       - LISTENING_ADDRESS=:8000
