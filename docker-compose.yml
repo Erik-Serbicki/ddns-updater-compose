@@ -7,9 +7,9 @@ services:
     ports:
       - 8040:8040/tcp
     volumes:
-      - ./data:/data
+      - ./data:/updater/data
     environment:
-      - CONFIG=/data/config.json
+      - CONFIG=
       - PERIOD=5m
       - UPDATE_COOLDOWN_PERIOD=5m
       - PUBLICIP_FETCHERS=all
@@ -26,7 +26,7 @@ services:
 
       # Backup
       - BACKUP_PERIOD=0 # '0' = disable
-      - BACKUP_DIRECTORY=/data
+      - BACKUP_DIRECTORY=/updater/data
 
       # Logs
       - LOG_LEVEL=info
